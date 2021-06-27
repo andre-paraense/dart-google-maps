@@ -24,6 +24,74 @@ library google_maps.core;
 import 'dart:async' show StreamController;
 import 'package:universal_html/html.dart';
 
+@JS('google.maps.LatLng')
+class LatLng {
+  external LatLng(
+      num? lat,
+      num? lng, [
+        bool? noWrap, // ignore: unused_element
+      ]);
+
+  external bool? equals(LatLng? other);
+
+  external String toString();
+
+  external String? toUrlValue([
+    num? precision,
+  ]);
+}
+
+extension LatLng$Ext on LatLng {
+  num get lat => _lat();
+  num get lng => _lng();
+
+  num _lat() => callMethod(this, 'lat', []);
+
+  num _lng() => callMethod(this, 'lng', []);
+}
+
+@JS('google.maps.LatLngBounds')
+class LatLngBounds {
+  external LatLngBounds([
+    LatLng? sw, // ignore: unused_element
+    LatLng? ne, // ignore: unused_element
+  ]);
+
+  external bool? contains(LatLng? latLng);
+
+  external bool? equals([
+    LatLngBounds? other,
+  ]);
+
+  external LatLngBounds? extend(LatLng? point);
+
+  external bool? intersects(LatLngBounds? other);
+
+  external bool? isEmpty();
+
+  external LatLng? toSpan();
+
+  external String toString();
+
+  external String? toUrlValue([
+    num? precision,
+  ]);
+
+  external LatLngBounds? union(LatLngBounds? other);
+}
+
+extension LatLngBounds$Ext on LatLngBounds {
+  LatLng? get center => _getCenter();
+  LatLng get northEast => _getNorthEast();
+  LatLng get southWest => _getSouthWest();
+
+  LatLng? _getCenter() => callMethod(this, 'getCenter', []);
+
+  LatLng _getNorthEast() => callMethod(this, 'getNorthEast', []);
+
+  LatLng _getSouthWest() => callMethod(this, 'getSouthWest', []);
+}
+
 @JS('google.maps.Geocoder')
 class Geocoder {
   external Geocoder();
