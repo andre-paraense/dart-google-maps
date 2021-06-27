@@ -14,8 +14,6 @@
 
 part of '../google_maps_core.dart';
 
-@JsName()
-@anonymous
 abstract class GeocoderComponentRestrictions {
   factory GeocoderComponentRestrictions() => $js();
   String? administrativeArea;

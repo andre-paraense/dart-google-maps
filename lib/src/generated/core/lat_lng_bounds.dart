@@ -14,7 +14,6 @@
 
 part of '../google_maps_core.dart';
 
-@JsName('google.maps.LatLngBounds')
 abstract class LatLngBounds {
   factory LatLngBounds([
     LatLng? sw, // ignore: unused_element
@@ -29,17 +28,14 @@ abstract class LatLngBounds {
 
   // synthetic getter for getCenter
   LatLng? get center => _getCenter();
-  @JsName('getCenter')
   LatLng? _getCenter();
 
   // synthetic getter for getNorthEast
   LatLng get northEast => _getNorthEast();
-  @JsName('getNorthEast')
   LatLng _getNorthEast();
 
   // synthetic getter for getSouthWest
   LatLng get southWest => _getSouthWest();
-  @JsName('getSouthWest')
   LatLng _getSouthWest();
 
   bool? intersects(LatLngBounds? other);
