@@ -16,8 +16,7 @@
 library google_maps.core;
 
 import 'dart:async' show StreamController;
-import 'package:universal_html/html.dart' show Document, Element, Node;
-import 'package:js_wrapping/js_wrapping.dart';
+import 'package:universal_html/html.dart';
 
 part 'core/g_map.dart';
 part 'core/map_options.dart';
