@@ -18,7 +18,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-@JS()
 library google_maps.core;
 
 import 'dart:async' show StreamController;
