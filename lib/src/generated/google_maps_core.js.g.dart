@@ -22,7 +22,7 @@
 library google_maps.core;
 
 import 'dart:async' show StreamController;
-import 'dart:html' show Document, Element, Node;
+import 'package:universal_html/html.dart' show Document, Element, Node;
 import 'package:js_wrapping/js_wrapping.dart';
 
 @JS('google.maps.Map')

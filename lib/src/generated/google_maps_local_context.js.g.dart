@@ -22,7 +22,7 @@
 library google_maps.local_context;
 
 import 'dart:async' show StreamController;
-import 'dart:html' show Element;
+import 'package:universal_html/html.dart' show Element;
 import 'package:js_wrapping/js_wrapping.dart';
 import 'package:google_maps/google_maps.dart';
 
