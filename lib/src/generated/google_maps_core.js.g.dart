@@ -23,6 +23,7 @@ library google_maps.core;
 
 import 'dart:async' show StreamController;
 import 'package:universal_html/html.dart';
+import 'package:js_wrapping/js_wrapping.dart';
 
 @JS('google.maps.LatLng')
 class LatLng {
