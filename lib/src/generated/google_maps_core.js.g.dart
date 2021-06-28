@@ -172,7 +172,7 @@ class GeocoderResponse {
 
 extension GeocoderResponse$Ext on GeocoderResponse {
   List<GeocoderResult?>? get results =>
-      getProperty(this, 'results')?.cast<GeocoderResult?>();
+      getProperty(this, 'results') as List<GeocoderResult?>;
 
   set results(List<GeocoderResult?>? value) {
     setProperty(this, 'results', value);
@@ -190,38 +190,38 @@ class GeocoderResult {
 extension GeocoderResult$Ext on GeocoderResult {
   List<GeocoderAddressComponent?>? get addressComponents =>
       getProperty(this, 'address_components')
-          ?.cast<GeocoderAddressComponent?>();
+           as List<GeocoderAddressComponent?>;
 
   set addressComponents(List<GeocoderAddressComponent?>? value) {
     setProperty(this, 'address_components', value);
   }
 
-  String? get formattedAddress => getProperty(this, 'formatted_address');
+  String? get formattedAddress => getProperty(this, 'formatted_address') as String?;
 
   set formattedAddress(String? value) {
     setProperty(this, 'formatted_address', value);
   }
 
-  String? get placeId => getProperty(this, 'place_id');
+  String? get placeId => getProperty(this, 'place_id') as String?;
 
   set placeId(String? value) {
     setProperty(this, 'place_id', value);
   }
 
-  List<String?>? get types => getProperty(this, 'types')?.cast<String?>();
+  List<String?>? get types => getProperty(this, 'types') as List<String?>;
 
   set types(List<String?>? value) {
     setProperty(this, 'types', value);
   }
 
-  bool? get partialMatch => getProperty(this, 'partial_match');
+  bool? get partialMatch => getProperty(this, 'partial_match') as bool?;
 
   set partialMatch(bool? value) {
     setProperty(this, 'partial_match', value);
   }
 
   List<String?>? get postcodeLocalities =>
-      getProperty(this, 'postcode_localities')?.cast<String?>();
+      getProperty(this, 'postcode_localities') as List<String?>;
 
   set postcodeLocalities(List<String?>? value) {
     setProperty(this, 'postcode_localities', value);
@@ -233,19 +233,19 @@ class GeocoderAddressComponent {
 }
 
 extension GeocoderAddressComponent$Ext on GeocoderAddressComponent {
-  String? get longName => getProperty(this, 'long_name');
+  String? get longName => getProperty(this, 'long_name') as String?;
 
   set longName(String? value) {
     setProperty(this, 'long_name', value);
   }
 
-  String? get shortName => getProperty(this, 'short_name');
+  String? get shortName => getProperty(this, 'short_name') as String?;
 
   set shortName(String? value) {
     setProperty(this, 'short_name', value);
   }
 
-  List<String?>? get types => getProperty(this, 'types')?.cast<String?>();
+  List<String?>? get types => getProperty(this, 'types') as List<String?>;
 
   set types(List<String?>? value) {
     setProperty(this, 'types', value);
@@ -269,7 +269,7 @@ class GeocoderGeometry {
 }
 
 extension GeocoderGeometry$Ext on GeocoderGeometry {
-  GeocoderLocationType? get locationType => getProperty(this, 'location_type');
+  GeocoderLocationType? get locationType => getProperty(this, 'location_type') as GeocoderLocationType?;
 
   set locationType(GeocoderLocationType? value) {
     setProperty(this, 'location_type', value);
