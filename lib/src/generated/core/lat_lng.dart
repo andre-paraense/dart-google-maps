@@ -14,6 +14,7 @@
 
 part of '../google_maps_core.dart';
 
+@JsName('google.maps.LatLng')
 abstract class LatLng {
   factory LatLng(
     num? lat,
@@ -25,10 +26,12 @@ abstract class LatLng {
 
   // custom getter for lat
   num get lat => _lat();
+  @JsName('lat')
   num _lat();
 
   // custom getter for lng
   num get lng => _lng();
+  @JsName('lng')
   num _lng();
 
   String toString();

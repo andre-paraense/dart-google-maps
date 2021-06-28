@@ -25,6 +25,7 @@ import 'package:universal_html/html.dart';
 import 'package:universal_html/js.dart';
 import 'package:universal_html/js_util.dart';
 
+@JS('google.maps.LatLng')
 class LatLng {
   external LatLng(
       num? lat,
@@ -50,6 +51,7 @@ extension LatLng$Ext on LatLng {
   num _lng() => callMethod(this, 'lng', []);
 }
 
+@JS('google.maps.LatLngBounds')
 class LatLngBounds {
   external LatLngBounds([
     LatLng? sw, // ignore: unused_element
@@ -91,6 +93,7 @@ extension LatLngBounds$Ext on LatLngBounds {
   LatLng _getSouthWest() => callMethod(this, 'getSouthWest', []);
 }
 
+@JS('google.maps.Geocoder')
 class Geocoder {
   external Geocoder();
 }
@@ -104,6 +107,8 @@ extension Geocoder$Ext on Geocoder {
           [request, callback == null ? null : allowInterop(callback)]));
 }
 
+@JS()
+@anonymous
 class GeocoderRequest {
   external factory GeocoderRequest();
 
@@ -132,6 +137,8 @@ class GeocoderRequest {
   external set region(String? value);
 }
 
+@JS()
+@anonymous
 class GeocoderComponentRestrictions {
   external factory GeocoderComponentRestrictions();
 
@@ -156,6 +163,7 @@ class GeocoderComponentRestrictions {
   external set route(String? value);
 }
 
+@JS('google.maps.GeocoderStatus')
 class GeocoderStatus {
   external static GeocoderStatus get ERROR;
   external static GeocoderStatus get INVALID_REQUEST;
@@ -166,6 +174,8 @@ class GeocoderStatus {
   external static GeocoderStatus get ZERO_RESULTS;
 }
 
+@JS()
+@anonymous
 class GeocoderResponse {
   external factory GeocoderResponse();
 }
@@ -179,6 +189,8 @@ extension GeocoderResponse$Ext on GeocoderResponse {
   }
 }
 
+@JS()
+@anonymous
 class GeocoderResult {
   external factory GeocoderResult();
 
@@ -228,6 +240,8 @@ extension GeocoderResult$Ext on GeocoderResult {
   }
 }
 
+@JS()
+@anonymous
 class GeocoderAddressComponent {
   external factory GeocoderAddressComponent();
 }
@@ -252,6 +266,8 @@ extension GeocoderAddressComponent$Ext on GeocoderAddressComponent {
   }
 }
 
+@JS()
+@anonymous
 class GeocoderGeometry {
   external factory GeocoderGeometry();
 
@@ -276,6 +292,7 @@ extension GeocoderGeometry$Ext on GeocoderGeometry {
   }
 }
 
+@JS('google.maps.GeocoderLocationType')
 class GeocoderLocationType {
   external static GeocoderLocationType get APPROXIMATE;
   external static GeocoderLocationType get GEOMETRIC_CENTER;
