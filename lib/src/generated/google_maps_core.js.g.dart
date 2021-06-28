@@ -26,17 +26,17 @@ import 'package:universal_html/js.dart';
 import 'package:universal_html/js_util.dart';
 
 class LatLng {
-  external LatLng(
+  LatLng(
       num? lat,
       num? lng, [
         bool? noWrap, // ignore: unused_element
       ]);
 
-  external bool? equals(LatLng? other);
+  bool? equals(LatLng? other);
 
-  external String toString();
+  String toString();
 
-  external String? toUrlValue([
+  String? toUrlValue([
     num? precision,
   ]);
 }
@@ -51,32 +51,32 @@ extension LatLng$Ext on LatLng {
 }
 
 class LatLngBounds {
-  external LatLngBounds([
+  LatLngBounds([
     LatLng? sw, // ignore: unused_element
     LatLng? ne, // ignore: unused_element
   ]);
 
-  external bool? contains(LatLng? latLng);
+  bool? contains(LatLng? latLng);
 
-  external bool? equals([
+  bool? equals([
     LatLngBounds? other,
   ]);
 
-  external LatLngBounds? extend(LatLng? point);
+  LatLngBounds? extend(LatLng? point);
 
-  external bool? intersects(LatLngBounds? other);
+  bool? intersects(LatLngBounds? other);
 
-  external bool? isEmpty();
+  bool? isEmpty();
 
-  external LatLng? toSpan();
+  LatLng? toSpan();
 
-  external String toString();
+  String toString();
 
-  external String? toUrlValue([
+  String? toUrlValue([
     num? precision,
   ]);
 
-  external LatLngBounds? union(LatLngBounds? other);
+  LatLngBounds? union(LatLngBounds? other);
 }
 
 extension LatLngBounds$Ext on LatLngBounds {
@@ -92,7 +92,7 @@ extension LatLngBounds$Ext on LatLngBounds {
 }
 
 class Geocoder {
-  external Geocoder();
+  Geocoder();
 }
 
 extension Geocoder$Ext on Geocoder {
@@ -105,69 +105,69 @@ extension Geocoder$Ext on Geocoder {
 }
 
 class GeocoderRequest {
-  external factory GeocoderRequest();
+  factory GeocoderRequest();
 
-  external String? get address;
+  String? get address;
 
-  external set address(String? value);
+  set address(String? value);
 
-  external LatLngBounds? get bounds;
+  LatLngBounds? get bounds;
 
-  external set bounds(LatLngBounds? value);
+  set bounds(LatLngBounds? value);
 
-  external GeocoderComponentRestrictions? get componentRestrictions;
+  GeocoderComponentRestrictions? get componentRestrictions;
 
-  external set componentRestrictions(GeocoderComponentRestrictions? value);
+  set componentRestrictions(GeocoderComponentRestrictions? value);
 
-  external LatLng? get location;
+  LatLng? get location;
 
-  external set location(LatLng? value);
+  set location(LatLng? value);
 
-  external String? get placeId;
+  String? get placeId;
 
-  external set placeId(String? value);
+  set placeId(String? value);
 
-  external String? get region;
+  String? get region;
 
-  external set region(String? value);
+  set region(String? value);
 }
 
 class GeocoderComponentRestrictions {
-  external factory GeocoderComponentRestrictions();
+  factory GeocoderComponentRestrictions();
 
-  external String? get administrativeArea;
+  String? get administrativeArea;
 
-  external set administrativeArea(String? value);
+  set administrativeArea(String? value);
 
-  external String? get country;
+  String? get country;
 
-  external set country(String? value);
+  set country(String? value);
 
-  external String? get locality;
+  String? get locality;
 
-  external set locality(String? value);
+  set locality(String? value);
 
-  external String? get postalCode;
+  String? get postalCode;
 
-  external set postalCode(String? value);
+  set postalCode(String? value);
 
-  external String? get route;
+  String? get route;
 
-  external set route(String? value);
+  set route(String? value);
 }
 
 class GeocoderStatus {
-  external static GeocoderStatus get ERROR;
-  external static GeocoderStatus get INVALID_REQUEST;
-  external static GeocoderStatus get OK;
-  external static GeocoderStatus get OVER_QUERY_LIMIT;
-  external static GeocoderStatus get REQUEST_DENIED;
-  external static GeocoderStatus get UNKNOWN_ERROR;
-  external static GeocoderStatus get ZERO_RESULTS;
+  static GeocoderStatus get ERROR;
+  static GeocoderStatus get INVALID_REQUEST;
+  static GeocoderStatus get OK;
+  static GeocoderStatus get OVER_QUERY_LIMIT;
+  static GeocoderStatus get REQUEST_DENIED;
+  static GeocoderStatus get UNKNOWN_ERROR;
+  static GeocoderStatus get ZERO_RESULTS;
 }
 
 class GeocoderResponse {
-  external factory GeocoderResponse();
+  factory GeocoderResponse();
 }
 
 extension GeocoderResponse$Ext on GeocoderResponse {
@@ -180,11 +180,11 @@ extension GeocoderResponse$Ext on GeocoderResponse {
 }
 
 class GeocoderResult {
-  external factory GeocoderResult();
+  factory GeocoderResult();
 
-  external GeocoderGeometry? get geometry;
+  GeocoderGeometry? get geometry;
 
-  external set geometry(GeocoderGeometry? value);
+  set geometry(GeocoderGeometry? value);
 }
 
 extension GeocoderResult$Ext on GeocoderResult {
@@ -229,7 +229,7 @@ extension GeocoderResult$Ext on GeocoderResult {
 }
 
 class GeocoderAddressComponent {
-  external factory GeocoderAddressComponent();
+  factory GeocoderAddressComponent();
 }
 
 extension GeocoderAddressComponent$Ext on GeocoderAddressComponent {
@@ -253,19 +253,19 @@ extension GeocoderAddressComponent$Ext on GeocoderAddressComponent {
 }
 
 class GeocoderGeometry {
-  external factory GeocoderGeometry();
+  factory GeocoderGeometry();
 
-  external LatLng? get location;
+  LatLng? get location;
 
-  external set location(LatLng? value);
+  set location(LatLng? value);
 
-  external LatLngBounds? get viewport;
+  LatLngBounds? get viewport;
 
-  external set viewport(LatLngBounds? value);
+  set viewport(LatLngBounds? value);
 
-  external LatLngBounds? get bounds;
+  LatLngBounds? get bounds;
 
-  external set bounds(LatLngBounds? value);
+  set bounds(LatLngBounds? value);
 }
 
 extension GeocoderGeometry$Ext on GeocoderGeometry {
@@ -277,8 +277,8 @@ extension GeocoderGeometry$Ext on GeocoderGeometry {
 }
 
 class GeocoderLocationType {
-  external static GeocoderLocationType get APPROXIMATE;
-  external static GeocoderLocationType get GEOMETRIC_CENTER;
-  external static GeocoderLocationType get RANGE_INTERPOLATED;
-  external static GeocoderLocationType get ROOFTOP;
+  static GeocoderLocationType get APPROXIMATE;
+  static GeocoderLocationType get GEOMETRIC_CENTER;
+  static GeocoderLocationType get RANGE_INTERPOLATED;
+  static GeocoderLocationType get ROOFTOP;
 }
