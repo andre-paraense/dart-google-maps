@@ -12,11 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-@JS()
 library google_maps.core;
 
 import 'dart:async' show StreamController;
 import 'package:universal_html/html.dart';
+import 'package:universal_html/js.dart';
+import 'package:universal_html/js_util.dart';
 
 part 'core/g_map.dart';
 part 'core/map_options.dart';
