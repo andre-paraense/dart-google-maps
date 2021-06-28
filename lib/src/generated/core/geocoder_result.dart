@@ -14,18 +14,25 @@
 
 part of '../google_maps_core.dart';
 
+@JsName()
+@anonymous
 abstract class GeocoderResult {
   factory GeocoderResult() => $js();
   // custom name for address_components
+  @JsName('address_components')
   List<GeocoderAddressComponent?>? addressComponents;
   // custom name for formatted_address
+  @JsName('formatted_address')
   String? formattedAddress;
   GeocoderGeometry? geometry;
   // custom name for place_id
+  @JsName('place_id')
   String? placeId;
   List<String?>? types;
   // custom name for partial_match
+  @JsName('partial_match')
   bool? partialMatch;
   // custom name for postcode_localities
+  @JsName('postcode_localities')
   List<String?>? postcodeLocalities;
 }
